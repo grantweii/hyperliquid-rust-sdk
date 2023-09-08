@@ -1,5 +1,5 @@
 pub(crate) mod agent;
-mod create_signature;
+pub mod create_signature;
 pub(crate) mod usdc_transfer;
 
 pub(crate) use create_signature::{
