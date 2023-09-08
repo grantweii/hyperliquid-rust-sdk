@@ -42,7 +42,7 @@ pub fn bps_diff(x: f64, y: f64) -> u16 {
 }
 
 #[derive(Copy, Clone, Debug)]
-pub(crate) enum EthChain {
+pub enum EthChain {
     Localhost,
     Arbitrum,
     ArbitrumGoerli,

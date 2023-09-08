@@ -29,7 +29,7 @@ pub fn sign_l1_action(wallet: &LocalWallet, connection_id: H256) -> Result<Signa
     sign_with_agent(wallet, EthChain::Localhost, "a", connection_id)
 }
 
-pub(crate) fn sign_usd_transfer_action(
+pub fn sign_usd_transfer_action(
     wallet: &LocalWallet,
     chain_type: EthChain,
     amount: &str,
@@ -57,7 +57,7 @@ pub(crate) fn sign_usd_transfer_action(
     }
 }
 
-pub(crate) fn sign_with_agent(
+pub fn sign_with_agent(
     wallet: &LocalWallet,
     chain_type: EthChain,
     source: &str,

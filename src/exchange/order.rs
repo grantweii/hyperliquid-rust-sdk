@@ -61,7 +61,7 @@ pub struct ClientOrderRequest {
 }
 
 impl ClientOrderRequest {
-    pub(crate) fn convert(self, coin_to_asset: &HashMap<String, u32>) -> Result<OrderRequest> {
+    pub fn convert(self, coin_to_asset: &HashMap<String, u32>) -> Result<OrderRequest> {
         let order_type = match self.order_type {
             ClientOrder::Limit(limit) => Order::Limit(Limit { tif: limit.tif }),
             ClientOrder::Trigger(trigger) => Order::Trigger(Trigger {
@@ -81,7 +81,7 @@ impl ClientOrderRequest {
             order_type,
         })
     }
-    pub(crate) fn create_hashable_tuple(
+    pub fn create_hashable_tuple(
         &self,
         coin_to_asset: &HashMap<String, u32>,
     ) -> Result<(u32, bool, u64, u64, bool, u8, u64)> {
