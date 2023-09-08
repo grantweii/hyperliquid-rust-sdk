@@ -14,7 +14,7 @@ use crate::{
     req::HttpClient,
     signature::{
         agent::mainnet::Agent,
-        usdc_transfer::mainnet::UsdTransferSignPayload, create_signature::{keccak, sign_l1_action, sign_usd_transfer_action, sign_with_agent},
+        usdc_transfer::mainnet::UsdTransferSignPayload, keccak, sign_l1_action, sign_usd_transfer_action, sign_with_agent,
     },
     BaseUrl, Error, ExchangeResponseStatus,
 };
