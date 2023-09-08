@@ -13,8 +13,8 @@ use crate::{
     prelude::*,
     req::HttpClient,
     signature::{
-        agent::mainnet::Agent, keccak, sign_l1_action, sign_usd_transfer_action, sign_with_agent,
-        usdc_transfer::mainnet::UsdTransferSignPayload,
+        agent::mainnet::Agent, sign_usd_transfer_action, sign_with_agent,
+        usdc_transfer::mainnet::UsdTransferSignPayload, create_signature::{keccak, sign_l1_action},
     },
     BaseUrl, Error, ExchangeResponseStatus,
 };
